@@ -1,22 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class pontuacao : MonoBehaviour
+public class joga : MonoBehaviour
 {
-    public static int pontos;
-    public Text pontosTXT;
-
     // Start is called before the first frame update
     void Start()
     {
-      pontos = 0;  
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-       pontosTXT.text = pontos.ToString();
+        if(Input.GetMouseButtonDown(0)){
+            SceneManager.LoadScene("Fase");
+        } 
     }
 }
